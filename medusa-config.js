@@ -6,16 +6,15 @@ const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 
 // Database URL (here we use a local database called medusa-development)
 
-const DB_USERNAME = process.env.DB_USERNAME;
-const DB_PASSWORD = process.env.DB_PASSWORD;
-const DB_HOST = process.env.DB_HOST;
-const DB_PORT = process.env.DB_PORT;
-const DB_DATABASE = process.env.DB_DATABASE;
+const DB_USERNAME = process.env.DB_USERNAME || "yynid";
+const DB_PASSWORD = process.env.DB_PASSWORD || "aYC1dxDjzoc0n9ojPE3CtYIIq9yzbcVT";
+const DB_HOST = process.env.DB_HOST || "dpg-cjb4r73bq8nc73bljabg-a";
+const DB_PORT = process.env.DB_PORT || "5432";
+const DB_DATABASE = process.env.DB_DATABASE || "ylstore";
 
-const DATABASE_URL = `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
+// const DATABASE_URL = `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
 
-// const DATABASE_URL =
-//   process.env.DATABASE_URL || "postgres://postgres:dj353e@localhost/medusa-store?sslmode=disable";
+const DATABASE_URL = process.env.DATABASE_URL || "postgres://yynid:aYC1dxDjzoc0n9ojPE3CtYIIq9yzbcVT@dpg-cjb4r73bq8nc73bljabg-a/ylstore";
 
 // Medusa uses Redis, so this needs configuration as well
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
@@ -23,7 +22,7 @@ const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 
 // Stripe keys
-const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "";
+const STRIPE_API_KEY = process.env.STRIPE_API_KEY || "pk_live_51NdOyMGHWQ38AB7XcAxORp5dAbpZ5rxqGfFvVe0o0w75vmlzGHnY8YxLHedEoRFOzMw4K6A6ot3fd6oX98u6LFj000KUErzPDd";
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || "";
 
 // This is the place to include plugins. See API documentation for a thorough guide on plugins.
