@@ -1,26 +1,25 @@
 // CORS when consuming Medusa from admin
-// const ADMIN_CORS = process.env.ADMIN_CORS 
-//   || "http://localhost:7000";
+// const ADMIN_CORS = process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
 const ADMIN_CORS = process.env.ADMIN_CORS || "https://frolicking-bunny-457b9d.netlify.app";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS 
-  || "http://localhost:8000";
+const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 
 // Database URL (here we use a local database called medusa-development)
 
 const DB_USERNAME = process.env.DB_USERNAME || "yynid";
-const DB_PASSWORD = process.env.DB_PASSWORD || "9ZcdQrvpPz49M45HHHoFYCDCNvCtmvgT";
-const DB_HOST = process.env.DB_HOST || "dpg-cjbk7n3bq8nc73de4h9g-a";
+const DB_PASSWORD = process.env.DB_PASSWORD || "qAgslCD6Odaom9RqP8Rg75klk90E9xAJ";
+const DB_HOST = process.env.DB_HOST || "dpg-cjb4r73bq8nc73bljabg-a";
 const DB_PORT = process.env.DB_PORT || "5432";
-const DB_DATABASE = process.env.DB_DATABASE || "wica";
+const DB_DATABASE = process.env.DB_DATABASE || "ylstore_ixr0";
 
 // const DATABASE_URL = `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
 
-const DATABASE_URL = process.env.DATABASE_URL || "postgres://yynid:9ZcdQrvpPz49M45HHHoFYCDCNvCtmvgT@dpg-cjbk7n3bq8nc73de4h9g-a/wica";
+const DATABASE_URL = process.env.DATABASE_URL || "postgres://yynid:qAgslCD6Odaom9RqP8Rg75klk90E9xAJ@dpg-cjc21is5kgrc738upt9g-a/ylstore_ixr0";
 
 // Medusa uses Redis, so this needs configuration as well
-const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+// const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+const REDIS_URL = process.env.REDIS_URL || "redis://red-cjb56ppitvpc73eok84g:6379";
 
 
 
