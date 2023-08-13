@@ -3,19 +3,20 @@
 const ADMIN_CORS = process.env.ADMIN_CORS || "https://frolicking-bunny-457b9d.netlify.app";
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
+// const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
+const STORE_CORS = process.env.STORE_CORS || " https://deluxe-chebakia-ad2b74.netlify.app";
 
 // Database URL (here we use a local database called medusa-development)
 
-const DB_USERNAME = process.env.DB_USERNAME || "ylstore_ca7r_user";
-const DB_PASSWORD = process.env.DB_PASSWORD || "HkLPJxDC3zouvTDJ3Xed2Z1V70KZ7U9i";
-const DB_HOST = process.env.DB_HOST || "dpg-cjc43kk5kgrc739698f0-a";
+const DB_USERNAME = process.env.DB_USERNAME || "yynid";
+const DB_PASSWORD = process.env.DB_PASSWORD || "Kbc1VkmVNjKZiAPGVDxx3MEcwzbVpj4l";
+const DB_HOST = process.env.DB_HOST || "dpg-cjc9fondb61s73dbcnpg-a";
 const DB_PORT = process.env.DB_PORT || "5432";
-const DB_DATABASE = process.env.DB_DATABASE || "ylstore_ca7r";
+const DB_DATABASE = process.env.DB_DATABASE || "ylstore_4ly5";
 
 // const DATABASE_URL = `postgres://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
 
-const DATABASE_URL = process.env.DATABASE_URL || "postgres://ylstore_ca7r_user:HkLPJxDC3zouvTDJ3Xed2Z1V70KZ7U9i@dpg-cjc43kk5kgrc739698f0-a/ylstore_ca7r";
+const DATABASE_URL = process.env.DATABASE_URL || "postgres://yynid:Kbc1VkmVNjKZiAPGVDxx3MEcwzbVpj4l@dpg-cjc9fondb61s73dbcnpg-a/ylstore_4ly5";
 
 // Medusa uses Redis, so this needs configuration as well
 // const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
@@ -41,16 +42,16 @@ const plugins = [
       // webhook_secret: "sk_test_51KqKaMLaYgbpclspBKcbwYNv6JpUZvOTgRt79DEL3S8h5vVE8i2u6lkcZpR8v1ZdJUfSQI2x2CLWwcbIJQCDuAfs006B1TJiv8",
     },
   },
-  {
-    resolve: `medusa-file-spaces`,
-    options: {
-        spaces_url: "https://farmaciapaseo51.fra1.digitaloceanspaces.com",
-        bucket: "farmaciapaseo51",
-        endpoint: "fra1.digitaloceanspaces.com",
-        access_key_id: "MJG7RIKBKIPMS4DJ7YOO",
-        secret_access_key: "PYXexWkuGdCTx3nNUwgDvVZ1KfZ/bS/5yR5iyH2VkJw",
-    },
-},
+//   {
+//     resolve: `medusa-file-spaces`,
+//     options: {
+//         spaces_url: "https://farmaciapaseo51.fra1.digitaloceanspaces.com",
+//         bucket: "farmaciapaseo51",
+//         endpoint: "fra1.digitaloceanspaces.com",
+//         access_key_id: "MJG7RIKBKIPMS4DJ7YOO",
+//         secret_access_key: "PYXexWkuGdCTx3nNUwgDvVZ1KfZ/bS/5yR5iyH2VkJw",
+//     },
+// },
 {
   resolve: `medusa-plugin-meilisearch`,
   options: {
@@ -69,6 +70,8 @@ const plugins = [
     },
   },
 },
+  // ...
+  `@medusajs/file-local`
 ];
 
 module.exports = {
